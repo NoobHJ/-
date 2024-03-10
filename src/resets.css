@@ -1,0 +1,29 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  flex-basis: 100%;
+  /* width: 100%; */
+  width: 1920px;
+  height: 1080px;
+  background-color: #25243a; /* 검은색 배경색 설정 */
+}
+
+#root {
+  position: relative;
+}
+
+body button:not(:disabled) {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body label {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}

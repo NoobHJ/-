@@ -1,0 +1,6 @@
+.Cam {
+  width: 1250px;
+  height: 550px;
+  background-image: /* webpackIgnore: true */ url("assets/cam/cam.png");
+  background-size: cover;
+}

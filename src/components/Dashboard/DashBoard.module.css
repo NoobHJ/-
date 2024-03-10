@@ -1,0 +1,6 @@
+.background {
+  width: 1251px;
+  height: 456px;
+  background-image: /* webpackIgnore: true */ url("assets/dashboard/dashboard.svg");
+  background-size: cover;
+}

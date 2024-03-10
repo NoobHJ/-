@@ -1,0 +1,48 @@
+.root {
+  height: 100%;
+  font-family: sans-serif;
+  background-color: #1e1e1e;
+  flex-basis: 100%;
+  overflow-y: auto;
+}
+.SideBarContainer {
+  width: 200px; /* SideBar의 너비 */
+  height: calc(100% - 10px); /* 페이지 높이에서 padding 제외한 높이 */
+  margin-right: 10px; /* 다른 컨테이너와의 간격 */
+}
+
+.CamContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(50% - 10px);
+  height: calc(50% - 10px);
+  margin: 5px;
+}
+
+.compassContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(50% - 10px);
+  height: calc(50% - 10px);
+  margin: 5px;
+}
+
+.DashBoardContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(50% - 10px);
+  height: calc(50% - 10px);
+  margin: 5px;
+}
+
+.ButtonContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: calc(50% - 10px);
+  height: calc(50% - 10px);
+  margin: 5px;
+}

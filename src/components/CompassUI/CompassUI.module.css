@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+}
+
+.compass2 {
+  width: 400px;
+  height: 550px;
+  background-image: /* webpackIgnore: true */ url("assets/compass2.png");
+  background-size: cover;
+}
+
+.compass1 {
+  width: 340px;
+  height: 340px;
+  background-image: /* webpackIgnore: true */ url("assets/compass1.png");
+  background-size: cover;
+  transform: translateX(-109%) translateY(24%) rotate(var(--rotation, 90deg));
+  z-index: 1;
+}
+
+.real {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20pt;
+  color: orange;
+  position: absolute;
+  top: 450px; /* y 좌표 */
+  left: 226px; /* x 좌표 */
+  z-index: 2; /* compass 이미지 위에 텍스트 표시를 위해 더 높은 z-index 적용 */
+}
+
+.disire {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20pt;
+  color: blue;
+  position: absolute;
+  top: 495px; /* y 좌표 */
+  left: 217px; /* x 좌표 */
+  z-index: 2; /* compass 이미지 위에 텍스트 표시를 위해 더 높은 z-index 적용 */
+}
