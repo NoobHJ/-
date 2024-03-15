@@ -6,10 +6,13 @@ body,
   min-height: 100%;
   display: flex;
   flex-basis: 100%;
-  /* width: 100%; */
+  width: 100%;
   width: 1920px;
   height: 1080px;
-  background-color: #25243a; /* 검은색 배경색 설정 */
+  /* background-image: url("../public/assets/ui.svg"); */
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #root {

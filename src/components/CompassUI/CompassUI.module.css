@@ -3,19 +3,24 @@
 }
 
 .compass2 {
-  width: 400px;
-  height: 550px;
-  background-image: /* webpackIgnore: true */ url("assets/compass2.png");
+  width: 331px;
+  height: 470.59px;
+  background-image: /* webpackIgnore: true */ url("assets/compass/compass2.svg");
   background-size: cover;
 }
 
 .compass1 {
-  width: 340px;
-  height: 340px;
-  background-image: /* webpackIgnore: true */ url("assets/compass1.png");
+  width: 292.06px;
+  height: 292.06px;
+  background-image: /* webpackIgnore: true */ url("assets/compass/compass1.svg");
   background-size: cover;
-  transform: translateX(-109%) translateY(24%) rotate(var(--rotation, 90deg));
+  transform: translateX(-100%) translateY(12%) rotate(var(--rotation, -180deg));
   z-index: 1;
+}
+
+/* 새로운 변수 추가 */
+:root {
+  --rotation: -180deg;
 }
 
 .real {
@@ -23,8 +28,8 @@
   font-size: 20pt;
   color: orange;
   position: absolute;
-  top: 450px; /* y 좌표 */
-  left: 226px; /* x 좌표 */
+  top: 390px; /* y 좌표 */
+  left: 210px; /* x 좌표 */
   z-index: 2; /* compass 이미지 위에 텍스트 표시를 위해 더 높은 z-index 적용 */
 }
 
@@ -33,7 +38,7 @@
   font-size: 20pt;
   color: blue;
   position: absolute;
-  top: 495px; /* y 좌표 */
-  left: 217px; /* x 좌표 */
+  top: 440px; /* y 좌표 */
+  left: 215px; /* x 좌표 */
   z-index: 2; /* compass 이미지 위에 텍스트 표시를 위해 더 높은 z-index 적용 */
 }

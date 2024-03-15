@@ -2,46 +2,60 @@
   display: flex; /* Use flexbox */
   flex-direction: column; /* Arrange items vertically */
   align-items: center; /* Center items horizontally */
-  gap: 20px; /* Spacing between logo and remote */
+  gap: 100px;
+  /* background-color: gray; */
+}
+
+.menu {
+  display: flex; /* Flexbox를 사용하여 요소들을 수평으로 배치합니다. */
+  flex-direction: column; /* 요소들을 세로로 정렬합니다. */
+  gap: 100px; /* 요소들 사이의 간격을 100px로 설정합니다. */
 }
 
 .logo {
-  width: 100px; /* 로고의 너비 */
-  height: 100px; /* 로고의 높이 */
+  width: 134px; /* 로고의 너비 */
+  height: 134px; /* 로고의 높이 */
   background-image: /* webpackIgnore: true */ url("assets/SideBar/logo.svg");
   background-size: cover;
 }
 
-.remote {
-  width: 50px;
-  height: 50px;
-  background-image: /* webpackIgnore: true */ url("assets/SideBar/remote.png");
+.gps {
+  width: 97px;
+  height: 97px;
+  background-image: /* webpackIgnore: true */ url("assets/SideBar/GPS.svg");
   background-size: cover;
   z-index: 1;
 }
 
-.terminal {
-  width: 50px;
-  height: 50px;
-  background-image: /* webpackIgnore: true */ url("assets/SideBar/terminal.png");
+.imu {
+  width: 97px;
+  height: 97px;
+  background-image: /* webpackIgnore: true */ url("assets/SideBar/IMU.svg");
   background-size: cover;
   z-index: 1;
 }
 
-.location {
-  width: 50px;
-  height: 50px;
-  background-image: /* webpackIgnore: true */ url("assets/SideBar/location.png");
+.lidar {
+  width: 97px;
+  height: 97px;
+  background-image: /* webpackIgnore: true */ url("assets/SideBar/lidar.svg");
+  background-size: cover;
+  z-index: 1;
+}
+
+.satlelite {
+  width: 97px;
+  height: 97px;
+  background-image: /* webpackIgnore: true */ url("assets/SideBar/satlelite.svg");
   background-size: cover;
   z-index: 1;
 }
 
 .ulsanlogo {
-  width: 100px; /* 로고의 너비 */
-  height: 100px; /* 로고의 높이 */
+  width: 97px;
+  height: 97px;
   background-image: /* webpackIgnore: true */ url("assets/SideBar/ulsanlogo.svg");
   background-size: cover;
-  position: fixed;
-  bottom: 0;
-  left: 0%;
+  /* position: fixed; */
+  z-index: 1;
 }

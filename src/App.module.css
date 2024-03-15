@@ -1,48 +1,20 @@
-.root {
-  height: 100%;
-  font-family: sans-serif;
-  background-color: #1e1e1e;
-  flex-basis: 100%;
-  overflow-y: auto;
-}
 .SideBarContainer {
-  width: 200px; /* SideBar의 너비 */
-  height: calc(100% - 10px); /* 페이지 높이에서 padding 제외한 높이 */
-  margin-right: 10px; /* 다른 컨테이너와의 간격 */
+  width: 200px;
+  height: calc(50% - 10px); /* 페이지 높이의 절반에서 padding 제외한 높이 */
+  margin-right: 10px;
+  margin-bottom: 10px; /* SideBarContainer와 다음 요소 사이 간격 */
 }
 
-.CamContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(50% - 10px);
-  height: calc(50% - 10px);
-  margin: 5px;
+/* 다른 container들을 위치시키는 컨테이너에 마진을 추가하여 간격을 설정합니다. */
+.CamContainer,
+.DashBoardContainer,
+.ButtonContainer {
+  margin-bottom: 10px; /* 다음 요소와의 간격 설정 */
 }
 
 .compassContainer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: calc(50% - 10px);
-  height: calc(50% - 10px);
-  margin: 5px;
-}
-
-.DashBoardContainer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: calc(50% - 10px);
-  height: calc(50% - 10px);
-  margin: 5px;
-}
-
-.ButtonContainer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: calc(50% - 10px);
-  height: calc(50% - 10px);
-  margin: 5px;
+  position: absolute; /* 절대 위치로 설정하여 상위 요소에 상대적으로 배치됩니다. */
+  top: 10px; /* 위에서 10px만큼 떨어진 위치로 설정합니다. */
+  right: -10px; /* 오른쪽에서 10px만큼 떨어진 위치로 설정합니다. */
+  z-index: 1; /* 다른 요소들보다 위에 표시되도록 z-index 설정합니다. */
 }

@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import type { FC } from "react";
 
 import resets from "../_resets.module.css";
@@ -9,14 +9,24 @@ interface Props {
 }
 
 export const SideBar: FC<Props> = memo(function SideBar(props = {}) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleLogoClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className={classes.container}>
-      {" "}
-      <div className={classes.logo}></div>
-      <button className={classes.remote}></button>
-      <button className={classes.terminal}></button>
-      <button className={classes.location}></button>
-      <div className={classes.ulsanlogo}></div>
+      <div className={classes.logo} onClick={handleLogoClick}></div>
+      {isMenuOpen && (
+        <div className={`${classes.menu} ${classes.gap}`}>
+          <button className={classes.gps}></button>
+          <button className={classes.imu}></button>
+          <button className={classes.lidar}></button>
+          <button className={classes.satlelite}></button>
+          <div className={classes.ulsanlogo}></div>
+        </div>
+      )}
     </div>
   );
 });
