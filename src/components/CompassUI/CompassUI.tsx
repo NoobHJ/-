@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 import type { FC } from "react";
 
 import resets from "../_resets.module.css";
@@ -8,11 +8,31 @@ interface Props {
   className?: string;
 }
 
-const real_deg = 0;
-const disire_deg = 200;
+const disire_deg = 100;
 
 const CompassUI: FC<Props> = memo(function CompassUI(props = {}) {
-  // 회전 각도를 설정할 변수
+  const [realDeg, setRealDeg] = useState(0);
+
+  useEffect(() => {
+    const fetchHeading = async () => {
+      try {
+        const response = await fetch("/utm_XYH");
+        const data = await response.json();
+        if (data && data.heading !== undefined) {
+          setRealDeg(data.heading);
+        }
+      } catch (error) {
+        console.error("Error fetching UTM data:", error);
+      }
+    };
+
+    // Fetch the heading initially and then every 5 seconds
+    fetchHeading();
+    const intervalId = setInterval(fetchHeading, 1000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div className={classes.container}>
@@ -20,11 +40,11 @@ const CompassUI: FC<Props> = memo(function CompassUI(props = {}) {
       {/* 회전 각도를 변수로 설정 */}
       <div
         className={classes.compass1}
-        style={{ "--rotation": `${real_deg}deg` } as React.CSSProperties}
+        style={{ "--rotation": `${realDeg}deg` } as React.CSSProperties}
       ></div>
 
       <div className={classes.disire_shpae}></div>
-      <h1 className={classes.real}>{real_deg}도</h1>
+      <h1 className={classes.real}>{realDeg}도</h1>
       <h1 className={classes.disire}>{disire_deg}도</h1>
     </div>
   );
